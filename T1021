@@ -44,11 +44,9 @@ public class Main {
 
 
         for(int i = 0; i < M; i++) {
-            int a = deque.indexOf(want[i]);
             int half;
-
+            int a = deque.indexOf(want[i]);
             half = deque.size() / 2;
-
 
             if(a <= half) {
                 for(int j = 0; j < a; j++) {
