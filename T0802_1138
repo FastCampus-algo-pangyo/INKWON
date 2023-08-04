@@ -19,7 +19,7 @@ public class Main {
                 if(people[i] == 0 && result[j] == 0) {
                     result[j] = i;
                     break;
-                } else if(으..!) {
+                } else if(result[j]==0) {
                     people[i]--;
                 }
             }
