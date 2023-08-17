@@ -22,9 +22,9 @@ public class A {
 
 		//배열 입력
         for (int i = 0; i < N; i++) {
-            String line = br.readLine();
+            String s = br.readLine();
             for (int j = 0; j < M; j++) {
-                maze[i][j] = line.charAt(j) - '0';
+                maze[i][j] = s.charAt(j) - '0';
             }
         }
 
