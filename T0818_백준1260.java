@@ -18,10 +18,10 @@ public class Main {
         }
 
         for (int i = 0; i < M; i++) {
-            int from = sc.nextInt();
-            int to = sc.nextInt();
-            graph[from].add(to);
-            graph[to].add(from);
+            int  = sc.nextInt();
+            int b = sc.nextInt();
+            graph[a].add(b);
+            graph[b].add(a);
         }
 
         for (int i = 1; i <= N; i++) {
