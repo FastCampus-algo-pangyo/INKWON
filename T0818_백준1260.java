@@ -1,42 +1,6 @@
-import java.util.*;
 
-public class Main {
     public static ArrayList<Integer>[] graph;
     public static boolean[] visited;
-
-    
-
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        int N = sc.nextInt();
-        int M = sc.nextInt();
-        int V = sc.nextInt();
-
-        graph = new ArrayList[N+1];
-        for (int i = 1; i <= N; i++) {
-            graph[i] = new ArrayList<>();
-        }
-
-        for (int i = 0; i < M; i++) {
-            int  = sc.nextInt();
-            int b = sc.nextInt();
-            graph[a].add(b);
-            graph[b].add(a);
-        }
-
-        for (int i = 1; i <= N; i++) {
-            Collections.sort(graph[i]);
-        }
-
-
-        visited = new boolean[N+1];
-        dfs(V);
-        System.out.println();
-
-        visited = new boolean[N+1];
-        bfs(V);
-        System.out.println();
-    }
 
   public static void dfs(int start) {
         Stack<Integer> stack = new Stack<>();
@@ -83,8 +47,6 @@ public class Main {
     }
 
   
-}
-
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
