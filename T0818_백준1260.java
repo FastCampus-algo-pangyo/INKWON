@@ -51,9 +51,9 @@ public class Main {
     visited[v] = true;
 
     for (int i = 0; i < graph[v].size(); i++) {
-        int nextV = graph[v].get(i);
-        if (!visited[nextV]) {    //방문한 곳이 아니라면 정렬된 다음 연결 노드로
-            dfs(nextV);
+        int next = graph[v].get(i);
+        if (!visited[next]) {    //방문한 곳이 아니라면 정렬된 다음 연결 노드로
+            dfs(next);
             }
         }
     }
@@ -71,10 +71,10 @@ public class Main {
             System.out.print(v + " ");
 
         for (int i = 0; i < graph[v].size(); i++) {  //방문한 곳이 아니라면 정렬된 다음 노드 방문처리 후 포함 원소 큐에 추가
-                int nextV = graph[v].get(i);
-                if (!visited[nextV]) {    
-                    visited[nextV] = true;
-                    queue.offer(nextV);
+                int next = graph[v].get(i);
+                if (!visited[next]) {    
+                    visited[next] = true;
+                    queue.offer(next);
                 }
             }
         }
