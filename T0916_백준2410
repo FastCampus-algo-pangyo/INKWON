@@ -1,0 +1,41 @@
+/* 시간초과....... */
+
+
+import java.io.*;
+
+public class Main {
+
+    static long[] keep = new long[21];
+    static int result = 0;
+
+    public static void main(String[] args) throws IOException {
+        long beforeTime = System.currentTimeMillis(); 
+
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        int N = Integer.parseInt(br.readLine());
+
+        // 가능한 최대 거듭제곱 지수를 계산
+        int power = (int)(Math.log(N) / Math.log(2));
+
+        go(N, power);
+        System.out.println(result);
+        long afterTime = System.currentTimeMillis(); 
+        long diffTime = afterTime - beforeTime;
+        System.out.println("실행 시간(ms): " + diffTime);
+    }
+
+    public static long go(int N, int power){
+        if (N == 0) return 1;                       // 0인 경우
+        if (N < 0 || power < 0) return 0;
+
+        if (keep[power] != 0) return keep[power];   // 이미 있는 경우
+//        System.out.println("N= " + N);
+        long use = go(N - (int)Math.pow(2, power), power);  //pow는 2의 power승 출력
+        long notUse = go(N, power - 1);
+
+        result += (int) (use + notUse);
+//        System.out.println("result = " + result);
+
+        return keep[power];
+    }
+}
